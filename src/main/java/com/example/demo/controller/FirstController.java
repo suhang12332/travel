@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("/first")
 public class FirstController {
@@ -14,6 +15,11 @@ public class FirstController {
     @GetMapping("/param")
     public String second(@RequestParam("test") String test){
         return test;
+    }
+
+    @GetMapping("/third")
+    public String third() {
+        return "third";
     }
 
 }
